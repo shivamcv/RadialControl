@@ -1,0 +1,58 @@
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.exe
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.pdb
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\bin\Release\resources.pri
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\bin\Release\AppxManifest.xml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.build.appxrecipe
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.g.i.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.g.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.g.i.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.g.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.g.i.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.g.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.g.i.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.g.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\XamlTypeInfo.g.cs
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.xaml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.xaml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.xaml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.xaml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.exe
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.pdb
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\priconfig.xml
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\layout.resfiles
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\resources.resfiles
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\pri.resfiles
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\LanguageQualifiers.txt
+c:\users\shivam.singh\documents\visual studio 2012\Projects\RadialControl\RadialControl\obj\Release\ProjectArchitectures.txt
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.exe
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.pdb
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\resources.pri
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\AppxManifest.xml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.build.appxrecipe
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.g.i.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.g.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.g.i.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.g.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.g.i.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.g.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.g.i.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.g.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\XamlTypeInfo.g.cs
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\App.xaml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\Common\StandardStyles.xaml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\MainPage.xaml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.xaml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.exe
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\RadialControl.pdb
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\priconfig.xml
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\priconfig.xml.intermediate
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\layout.resfiles
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\layout.resfiles.intermediate
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\resources.resfiles
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\resources.resfiles.intermediate
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\pri.resfiles
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\pri.resfiles.intermediate
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\qualifiers.txt
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\qualifiers.txt.intermediate
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\MultipleQualifiersPerDimensionFound.txt
+Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\ProjectArchitectures.txt

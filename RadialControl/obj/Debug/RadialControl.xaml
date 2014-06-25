@@ -1,0 +1,966 @@
+﻿<Page
+    x:Class="RadialControl.RadialControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RadialControl"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="White"
+    >
+    <Page.Resources >
+        <SolidColorBrush Color="White" x:Key="InnerArcColor"/>
+        <SolidColorBrush Color="Purple" x:Key="OuterArcColor"/>
+        <SolidColorBrush Color="Pink" x:Key="BgArcColor"/>
+        <SolidColorBrush Color="DarkSlateGray" x:Key="OuterArcPointerOverColor"/>
+
+        <Storyboard x:Name="storyboardShowSubmenu">
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>-->
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>-->
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.778146"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.778146"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboardShowmenu">
+           
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.283" Value="0.9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.367" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>-->
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>-->
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.778146"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.778146"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.333" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboardHideSubmenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.033" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.033" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.033" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.033" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.9"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.033" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.9"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.233" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>-->
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.233" Value="0.778146"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.233" Value="0.778146"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.233" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboardShowLabels">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t0">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t4">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t6">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t7">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.17" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-13" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i0" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-15" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i1" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="i1" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-11" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i2" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-7" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i3" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="i3" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-7" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i4" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-7" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i5" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="i5" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-11" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i6" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="i7" />
+            <DoubleAnimation Duration="0:0:0.25" From="0" To="-15" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="i7" />
+        </Storyboard>
+        <Storyboard x:Name="storyboardRootOpen">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BaseRing" Storyboard.TargetProperty="Visibility" Duration="0">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t0"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t1"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t2"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001"  Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t3"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t4"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t5"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t6"/>
+            <DoubleAnimation To="0" Duration="0:0:0.001" Storyboard.TargetProperty="(UIElement.Opacity)"  Storyboard.TargetName="t7"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-45">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-45">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="-34.5048"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.749939">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.80826"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.749939">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.80826"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.267" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.117" Value="0.233228"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-45">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-13.3382"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboardRootClose">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BaseRing" Storyboard.TargetProperty="Visibility" Duration="00:00:01">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.183" Value="-34.5048"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-45">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.183" Value="0.80826"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.749939">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.183" Value="0.80826"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.749939">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SMLRing">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.183" Value="0.233228"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgInnerBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-13.3382"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-45">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.083" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.925899"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.75">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActionGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid  Background="White">
+
+
+        <Grid   RenderTransformOrigin="0.5,0.5" Height="266" Width="266">
+            <Grid.RenderTransform >
+                <RotateTransform Angle="22.5" />
+            </Grid.RenderTransform>
+            <Grid x:Name="BaseRing" Visibility="Collapsed"  RenderTransformOrigin="0.5,0.5" >
+                <Grid.RenderTransform>
+                    <CompositeTransform />
+                </Grid.RenderTransform>
+
+
+               <Grid   x:Name="imgInnerBackground" RenderTransformOrigin="0.5,0.5" >
+                    <Grid.RenderTransform>
+                        <CompositeTransform/>
+                    </Grid.RenderTransform>
+                    
+                    <Ellipse   x:Name="BgRing" Fill="{StaticResource BgArcColor}"  RenderTransformOrigin="0.5,0.5" Height="266" Width="266">
+                    </Ellipse>
+
+
+                    <Ellipse   RenderTransformOrigin="0.5,0.5"  Height="216" Width="216" Fill="White">
+
+                    </Ellipse>
+
+                    <Path x:Name="q0" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,32" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="202.46583704589972866564062994227,61.066019966134886064394532554329" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='10' x:Name="r0"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,83" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="167.73291852294986433282031497113,97.033009983067443032197266277164" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+
+                    </Path>
+
+
+                    <Path x:Name="q1" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="203.71067811865475244008443621048,62.289321881345247559915563789515" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="232.98476951563912391570115588139,131.25475935627164871805810214837" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='11' x:Name="r1"                                                                   Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="168.35533905932737622004221810524,97.644660940672623779957781894758" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="182.9923847578195619578505779407,132.12737967813582435902905107418" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q2" Opacity="0" Stroke="{StaticResource OuterArcColor}" StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="233,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="204.93398003386511393560546744567,202.46583704589972866564062994227" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='12' x:Name="r2"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="183,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="168.96699001693255696780273372284,167.73291852294986433282031497113" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q3" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="203.71067811865475244008443621048,203.71067811865475244008443621048" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="134.74524064372835128194189785163,232.98476951563912391570115588139" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='13' x:Name="r3"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="168.35533905932737622004221810524,168.35533905932737622004221810524" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="133.87262032186417564097094892582,182.9923847578195619578505779407" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q4" Opacity="0"  Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,233" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="63.534162954100271334359370057731,204.93398003386511393560546744567" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='14' x:Name="r4"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,183" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="98.267081477050135667179685028866,168.96699001693255696780273372284" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q5" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="62.289321881345247559915563789515,203.71067811865475244008443621048" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="33.015230484360876084298844118609,134.74524064372835128194189785163" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='15' x:Name="r5"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="97.644660940672623779957781894758,168.35533905932737622004221810524" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="83.007615242180438042149422059304,133.87262032186417564097094892582" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q6" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="32,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="61.066019966134886064394532554329,63.534162954100271334359370057731" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='16' x:Name="r6"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="83,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="97.033009983067443032197266277164,98.267081477050135667179685028866" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                    <Path x:Name="q7" Opacity="0" Stroke="{StaticResource OuterArcColor}"  StrokeThickness="4">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="62.289321881345247559915563789515,62.289321881345247559915563789515" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="100,100"  Point="131.25475935627164871805810214837,33.015230484360876084298844118609" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='17' x:Name="r7"                                                                    Stroke="{StaticResource InnerArcColor}"   StrokeThickness="98">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="97.644660940672623779957781894758,97.644660940672623779957781894758" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="50,50" Point="132.12737967813582435902905107418,83.007615242180438042149422059304" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+
+                </Grid>
+
+
+                <Grid  x:Name="ActionGrid"  RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <CompositeTransform/>
+                    </Grid.RenderTransform>
+
+
+                    <Path x:ConnectionId='2' x:Name="p0"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,12.5" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="216.70633364030917304209695908043,46.319554059192537707595411727966" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='3' x:Name="p1"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="218.20636713297897669030174563363,47.793632867021023309698254366366" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="253.48164726634514431841989283708,130.89698502430733670526001308878" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='4' x:Name="p2"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="253.5,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="219.68044594080746229240458827203,216.70633364030917304209695908043" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='5' x:Name="p3"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="218.20636713297897669030174563363,218.20636713297897669030174563363" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="135.10301497569266329473998691122,253.48164726634514431841989283708" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='6' x:Name="p4"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="133,253.5" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="49.293666359690826957903040919566,219.68044594080746229240458827203" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='7' x:Name="p5"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="47.793632867021023309698254366366,218.20636713297897669030174563363" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="12.518352733654855681580107162923,135.10301497569266329473998691122" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='8' x:Name="p6"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="12.5,133" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="46.319554059192537707595411727966,49.293666359690826957903040919566" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:ConnectionId='9' x:Name="p7"                                                                                       Stroke="{StaticResource OuterArcColor}"  StrokeThickness="25">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="47.793632867021023309698254366366,47.793632867021023309698254366366" >
+                                    <ArcSegment SweepDirection="Clockwise" Size="120.5,120.5" Point="130.89698502430733670526001308878,12.518352733654855681580107162923" IsLargeArc="False" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+
+                    <Viewbox Margin="83,20,-9,231" Height="20" Width="20">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform>
+                                <CompositeTransform Rotation="-67"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="29,20,120,231">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="-113"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="151,-58,-65,24">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="-21"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="16,81,230,165">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="-159"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="-214,85,0,0">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="158"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="81,232,165,14">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="111"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="99,-20,0,-229">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="65"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                    <Viewbox Height="20" Width="20" Margin="215,84,0,0">
+                        <Path RenderTransformOrigin="0.5,0.5" Fill="Pink" Data="F1 M100,0L175,50 100,100z" >
+                            <Path.RenderTransform >
+                                <CompositeTransform Rotation="20"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+
+
+                </Grid>
+
+
+
+                <!--<Ellipse x:Name="ActionGrid" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5" Height="266" Width="266" StrokeThickness="25" Stroke="{StaticResource OuterArcColor}">
+                    <Ellipse.RenderTransform>
+                        <CompositeTransform />
+                    </Ellipse.RenderTransform>
+                </Ellipse>-->
+
+
+
+                <Grid  x:Name="SMLRing" RenderTransformOrigin=".5,.5">
+                    
+                    
+                    <Grid.RenderTransform>
+                        <CompositeTransform />
+                    </Grid.RenderTransform>
+
+                    <Grid RenderTransformOrigin=".5,.5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="1.3*"/>
+                            <RowDefinition  Height="1.3*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="1.3*"/>
+                            <ColumnDefinition Width="1.3*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RenderTransform>
+                        <RotateTransform Angle="-22.5"/>
+                    </Grid.RenderTransform>
+
+            
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,-16,-16" Grid.Column="1" Grid.Row="0"  >
+                        <Image x:Name="i0" IsHitTestVisible="False" Margin="0,0,0,-13" Source="ms-appx:///Assets/p7.png" Height="24" Width="24">
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t0" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="2" Grid.Row="1" Margin="0,10,10,0" >
+                        <Image x:Name="i1" Margin="0,0,-1,-15" IsHitTestVisible="False" Source="ms-appx:///Assets/p1.png"  Height="24" Width="24" >
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t1" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-16,-16,0,0" Grid.Column="3" Grid.Row="2" >
+                        <Image x:Name="i2" Margin="0,0,0,-11" IsHitTestVisible="False" Source="ms-appx:///Assets/p6.png" Height="24" Width="24">
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t2" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="2" Grid.Row="2"  Margin="0,0,10,10" >
+                        <Image x:Name="i3" Margin="0,0,-1,-7" IsHitTestVisible="False" Source="ms-appx:///Assets/p3.png" Height="24" Width="24" >
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t3" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="3"  Margin="-16,-16,0,0" >
+                        <Image x:Name="i4" Margin="0,0,0,-7" IsHitTestVisible="False" Source="ms-appx:///Assets/p5.png" Height="24" Width="24">
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t4" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="2"  Margin="10,0,0,10" >
+                        <Image x:Name="i5" Margin="0,0,-1,-7" IsHitTestVisible="False" Source="ms-appx:///Assets/p2.png" Height="24" Width="24">
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t5"  Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="0" Grid.Row="1"  Margin="0,0,-16,-16" >
+                        <Image x:Name="i6" Margin="0,0,0,-11" IsHitTestVisible="False" Source="ms-appx:///Assets/p4.png" Height="24" Width="24">
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t6" Text="Paint" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Margin="10,10,0,0">
+                        <Image x:Name="i7" Margin="0,0,1,-15" IsHitTestVisible="False"   Source="ms-appx:///Assets/p0.png"  Height="24" Width="24"  >
+                            <Image.RenderTransform>
+                                <CompositeTransform />
+                            </Image.RenderTransform>
+                        </Image>
+                            <TextBlock IsHitTestVisible="False" x:Name="t7" Text="Paint"  HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Image x:Name="CloseImage" IsHitTestVisible="False" Source="ms-appx:///Assets/c0.png" Height="32" Width="32"/>
+        <Image x:Name="OpenImage" IsHitTestVisible="False" Source="ms-appx:///Assets/c1.png" Height="32" Width="32"/>
+        <Ellipse x:ConnectionId='1' x:Name="CenterButton"                              Height="42" Width="42" Stroke="Purple" StrokeThickness="2" Fill="Transparent"/>
+
+      
+    </Grid>
+</Page>
+

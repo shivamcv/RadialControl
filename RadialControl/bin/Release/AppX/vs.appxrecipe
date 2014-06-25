@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SIMFORM-W39</Machine>
+    <WindowsUser>Shivam.Singh</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>152abaf9-e8c9-4097-bb3d-358a9072a6c6</PackageIdentityName>
+    <IntermediateOutputPath>Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>922943D2016EAB8024D9F3EED6F11E7871396C1A23C353C3E5A7FF8EC61987D4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>152abaf9-e8c9-4097-bb3d-358a9072a6c6_1.0.0.1_neutral__216wkkz12eexy</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>152abaf9-e8c9-4097-bb3d-358a9072a6c6_216wkkz12eexy!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>152abaf9-e8c9-4097-bb3d-358a9072a6c6</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=shivam.singh</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.1</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-25T07:51:57.668</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.exe">
+      <PackagePath>RadialControl.exe</PackagePath>
+      <Modified>2014-06-25T07:51:57.029</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\c0.png">
+      <PackagePath>Assets\c0.png</PackagePath>
+      <Modified>2012-12-26T10:28:48.636</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\c1.png">
+      <PackagePath>Assets\c1.png</PackagePath>
+      <Modified>2012-12-26T10:28:48.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p0.png">
+      <PackagePath>Assets\p0.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p1.png">
+      <PackagePath>Assets\p1.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.427</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p2.png">
+      <PackagePath>Assets\p2.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.418</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p3.png">
+      <PackagePath>Assets\p3.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p4.png">
+      <PackagePath>Assets\p4.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.420</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p5.png">
+      <PackagePath>Assets\p5.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.421</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p6.png">
+      <PackagePath>Assets\p6.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.422</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\p7.png">
+      <PackagePath>Assets\p7.png</PackagePath>
+      <Modified>2012-12-26T10:26:24.424</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T03:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2012-12-26T10:32:21.612</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T23:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2012-12-26T10:19:53.753</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\RadialControl.xaml">
+      <PackagePath>RadialControl.xaml</PackagePath>
+      <Modified>2012-12-26T10:37:29.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Z:\My Documents\Visual Studio 2012\Projects\RadialControl\RadialControl\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-06-25T07:51:59.265</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
